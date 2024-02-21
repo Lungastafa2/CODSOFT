@@ -1,13 +1,15 @@
 var number ="";
 var sum = 0;
-var num = 0;
+var num1 = 0;
 var numbers = [];
 var sign = [];
+var signChoosen = 0;
+var increment = 0;
 
 var setScreen = document.getElementById("screen_input") 
 
 
-
+// Displaying numbers on screen function
 
 function myNumberFunction(a) {
 
@@ -20,161 +22,102 @@ function myNumberFunction(a) {
   }
 
 
+  function signFunction(si){
 
+    numbers.push(number);
+    sign.push(si);
+
+  }
+
+
+// Choosing Sign for math Operation
 
 function mySignFunction(b) {
 
 
-    
-    if (b==="P"){
 
-        numbers.push(number);
-        sign.push("+");
-        console.log(numbers);
-        console.log(sign);
+    // if Plus sign is choosen
+  if (b==="P"){
+
+    signFunction("P")
     }
+
+      // if Minus sign is choosen
+    else if ( b=== "S"){
+
+      signFunction("S")
+    }
+
+      // if Division sign is choosen
+    else if ( b=== "D"){
+
+      signFunction("D")
+   }
+
+      // if Multiply sign is choosen
+   else if ( b=== "M"){
+
+    signFunction("D")
+   }
+
+
+        // if Equal sign is clicked
+
     else if (b==="E"){
 
+            //add the last number to the array
             numbers.push(number)
-            for(i=0; i< numbers.length;i++){
 
-                num= parseInt(numbers[i]);
+             for(n=0; n < sign.length ; n++){
 
+               signChoosen = sign[n];
 
-                sum += num
+               if(signChoosen==="P"){
+
+                 sum = parseInt(numbers[n]) + parseInt(numbers[n+1]);
+                 setScreen.value = sum;      
+
+              }
+
+              if(signChoosen==="S"){
+
+               sum = parseInt(numbers[n]) - parseInt(numbers[n+1]);
+               setScreen.value = sum;
+         
+            }
+
+            if(signChoosen==="D"){
+
+             sum = parseInt(numbers[n]) / parseInt(numbers[n+1]);
+             setScreen.value = sum;
+       
+          }
+
+          if(signChoosen==="M"){
 
             
-        
-            }
-            console.log(sum)
+           sum = parseInt(numbers[n]) * parseInt(numbers[n+1]);
+           setScreen.value = sum;
 
-        
+          }
+
+        }
+
     }
 
-     number = "" ;
+  number = "" ;
    
+}
+
+
+
+
+function myClearFunction() {
+
+      location.reload();
   }
 
 
-// function myOneFunction() {
 
-//     number = 1 ;
-
-//     setScreen.value = number;
-//   }
-
-
-//   function myTwoFunction() {
-//     number = 2 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function myThreeFunction() {
-//     number = 3 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function myFourFunction() {
-
-//     number = 4 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function myFiveFunction() {
-//     number = 5 ;
-//     setScreen.value = number;
-//   }
-
-
-
-//   function mySixFunction() {
-
-//     number = 6 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function mySevenFunction() {
-//     number = 7 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function myEightFunction() {
-
-//     number = 8 ;
-//     setScreen.value = number;
-//   }
-
-
-//   function myNineFunction() {
-//     number = 9 ;
-//     setScreen.value = number;
-//   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   function myPlusFunction() {
-//     sum += number
-     
-//   }
-
-//   function mySubtractFunction() {
-//     sum -= number
-     
-//   }
-
-//   function myMultplyFunction() {
-//     sum *= number
-     
-//   }
-
-//   function myDivideFunction() {
-//     sum /= number
-     
-//   }
-
-//   function myEqualFunction() {
-//     // myPlusFunction();
-//     setScreen.value = sum
-     
-//   }
 
 
