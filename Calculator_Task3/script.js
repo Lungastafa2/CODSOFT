@@ -27,6 +27,8 @@ function myNumberFunction(a) {
     numbers.push(number);
     sign.push(si);
 
+  
+
   }
 
 
@@ -56,7 +58,6 @@ function mySignFunction(b) {
 
       // if Multiply sign is choosen
    else if ( b=== "M"){
-
     signFunction("D")
    }
 
