@@ -11,7 +11,7 @@ This is a simple calculator web application that allows users to perform basic a
 
 ## Demo
 
-You can see a live demo of the calculator ![image](https://github.com/GeorginaMampuru/CODSOFT/assets/66384787/9bba7221-7dae-482c-b145-be9086a0182c)
+You can see a live demo of the calculator ![image](https://github.com/Lungastafa2/CODSOFT/assets/49059211/62aef6ee-6458-4781-a1d5-fe03618d51fe)
 
 
 ## Technologies Used
@@ -25,4 +25,4 @@ You can see a live demo of the calculator ![image](https://github.com/GeorginaMa
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/GeorginaMampuru
+   git clone https://github.com/Lungastafa2
